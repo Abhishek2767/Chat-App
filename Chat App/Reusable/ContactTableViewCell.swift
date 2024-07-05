@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatsTableViewCell: UITableViewCell {
+class ContactTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!

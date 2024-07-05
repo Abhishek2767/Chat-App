@@ -25,6 +25,7 @@
                 <outlet property="countryCodeLabel" destination="KEI-gD-lnO" id="KH1-ox-W2s"/>
                 <outlet property="countryNameLabel" destination="p6S-zv-VM1" id="lI9-2O-5Xg"/>
                 <outlet property="countryPickerView" destination="E1m-hj-Ita" id="4se-LM-U9Z"/>
+                <outlet property="numberTextField" destination="ziD-fP-xNh" id="Eh0-3v-oQY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

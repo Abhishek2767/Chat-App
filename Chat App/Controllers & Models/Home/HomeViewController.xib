@@ -20,7 +20,7 @@
                 <outlet property="btnStartChatting" destination="4Mo-Ph-ZjQ" id="dKT-GB-Mrw"/>
                 <outlet property="callsUnderLineView" destination="ebd-I5-ZNH" id="QLL-hR-nHz"/>
                 <outlet property="chatUnderLineView" destination="YO5-5z-1cW" id="Lee-NE-Mo0"/>
-                <outlet property="chatsTableView" destination="jrX-bN-CZ3" id="Caw-yi-wgA"/>
+                <outlet property="contactsTableView" destination="jrX-bN-CZ3" id="QuT-Rd-bUI"/>
                 <outlet property="lblNotHaveChat" destination="cUC-f6-3wy" id="2x3-6W-QA1"/>
                 <outlet property="noChatView" destination="2l2-gt-OCP" id="NkU-4I-VqS"/>
                 <outlet property="statusUnderLineView" destination="QPt-Eu-bay" id="cgL-Qa-ZgU"/>

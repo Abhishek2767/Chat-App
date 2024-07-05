@@ -20,6 +20,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryPickerView: CountryPickerView!
     @IBOutlet weak var countryCodeLabel: UILabel!
+    @IBOutlet weak var numberTextField: UITextField!
     
     
     
@@ -47,7 +48,21 @@ class LoginVC: UIViewController {
     
     //MARK: - Button Actions
     @IBAction func nextButtonAction(_ sender: UIButton) {
-        viewModel.router.redirectToOTP()
+        if let number = numberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), number != "" {
+            
+            Utility.showLoadingView()
+            viewModel.verifyNumber(phoneNumber: number) { result in
+                Utility.hideLoadingView()
+                
+                switch result {
+                case .success(_):
+                    self.viewModel.router.redirectToOTP()
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     

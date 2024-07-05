@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var callsUnderLineView: UIView!
     @IBOutlet weak var btnStartChatting: UIButton!
     @IBOutlet weak var noChatView: UIView!
-    @IBOutlet weak var chatsTableView: UITableView!
+    @IBOutlet weak var contactsTableView: UITableView!
     
     
     @IBOutlet weak var lblNotHaveChat: UILabel!
@@ -53,17 +53,17 @@ class HomeViewController: UIViewController {
     
     @IBAction func optionsButtonAction(_ sender: UIButton) {
         switch sender.tag {
-
+            
         case 1:
             chatUnderLineView.isHidden = true
             statusUnderLineView.isHidden = false
             callsUnderLineView.isHidden = true
-
+            
         case 2:
             chatUnderLineView.isHidden = true
             statusUnderLineView.isHidden = true
             callsUnderLineView.isHidden = false
-
+            
         default:
             chatUnderLineView.isHidden = true
             statusUnderLineView.isHidden = true
@@ -73,13 +73,15 @@ class HomeViewController: UIViewController {
     
     
     //MARK: - Functions
-
+    
     private func configure() {
-        chatsTableView.delegate = self
-        chatsTableView.dataSource = self
-        chatsTableView.register(UINib(nibName: ChatsTableViewCell.className, bundle: nil), forCellReuseIdentifier: ChatsTableViewCell.className)
-        chatsTableView.contentInset = UIEdgeInsets(top: 11, left: 0, bottom: 11, right: 0)
+        contactsTableView.delegate = self
+        contactsTableView.dataSource = self
+        contactsTableView.showsHorizontalScrollIndicator = false
+        contactsTableView.showsVerticalScrollIndicator = false
+        contactsTableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
 
+        contactsTableView.register(UINib(nibName: ContactTableViewCell.className, bundle: nil), forCellReuseIdentifier: ContactTableViewCell.className)
     }
 }
 
@@ -90,11 +92,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatsTableViewCell.className, for: indexPath) as? ChatsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.className, for: indexPath) as? ContactTableViewCell else {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.router.redirectToChat()
     }
 }

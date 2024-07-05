@@ -81,7 +81,7 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="count">
-                                            <integer key="value" value="4"/>
+                                            <integer key="value" value="6"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColorTextField">
                                             <color key="value" name="primaryText"/>

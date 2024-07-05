@@ -55,7 +55,18 @@ class OTPViewController: UIViewController {
     }
     
     @IBAction func verifyButtonAction(_ sender: UIButton) {
-        viewModel.router.redirectToHome()
+        Utility.showLoadingView()
+        viewModel.signIn(otp: otpView.text ?? "") { result in
+            Utility.hideLoadingView()
+            
+            switch result {
+            case .success(_):
+                self.viewModel.router.redirectToHome()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     //MARK: - Function
@@ -77,6 +88,7 @@ extension OTPViewController: DPOTPViewDelegate {
             btnVerify.isEnabled = true
             btnVerify.backgroundColor = .darkButton
         } else {
+            btnVerify.isEnabled = false
             btnVerify.backgroundColor = .darkButton.withAlphaComponent(0.44)
         }
     }

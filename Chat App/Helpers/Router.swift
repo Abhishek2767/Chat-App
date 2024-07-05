@@ -13,6 +13,7 @@ protocol RouterProtocol {
     func redirectToLogin()
     func redirectToOTP()
     func redirectToHome()
+    func redirectToChat()
 }
 
 
@@ -33,6 +34,11 @@ class Router: RouterProtocol {
     
     func redirectToHome() {
         let vc = HomeViewController(viewModel: HomeViewModel(router: Router()))
+        SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
+    }
+    
+    func redirectToChat() {
+        let vc = ChatViewController(viewModel: ChatViewModel(router: Router()))
         SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
     }
 }
