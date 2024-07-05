@@ -9,6 +9,7 @@ target 'Chat App' do
 
   pod 'IQKeyboardManagerSwift'
   pod 'CountryPickerView'
+  pod 'DPOTPView'
 
   
 end

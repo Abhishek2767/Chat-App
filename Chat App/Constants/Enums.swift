@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum HomeSection {
+    case chat, status, calls
+}

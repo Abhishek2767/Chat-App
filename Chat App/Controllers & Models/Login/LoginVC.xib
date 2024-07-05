@@ -193,6 +193,9 @@
                             <state key="normal" title="NEXT">
                                 <color key="titleColor" name="primaryText"/>
                             </state>
+                            <connections>
+                                <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="wkR-bU-5To"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

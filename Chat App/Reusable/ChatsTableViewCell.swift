@@ -7,7 +7,15 @@
 
 import UIKit
 
-class ChatsTableVIewCell: UITableViewCell {
+class ChatsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var messageStatusImageView: UIImageView!
+    @IBOutlet weak var messageTypeImageView: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,7 +25,7 @@ class ChatsTableVIewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
     
 }

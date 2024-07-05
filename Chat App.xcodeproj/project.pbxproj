@@ -22,6 +22,9 @@
 		BB0B919B2C35680400F50A08 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B919A2C35680400F50A08 /* Router.swift */; };
 		BB0B919D2C356B9C00F50A08 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B919C2C356B9C00F50A08 /* LoginViewModel.swift */; };
 		BB0B919F2C356FF300F50A08 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B919E2C356FF300F50A08 /* WelcomeViewModel.swift */; };
+		BB2651012C36AED3007A4F25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2650FF2C36AED3007A4F25 /* HomeViewController.swift */; };
+		BB2651022C36AED3007A4F25 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2651002C36AED3007A4F25 /* HomeViewController.xib */; };
+		BB2651042C36AEDE007A4F25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2651032C36AEDE007A4F25 /* HomeViewModel.swift */; };
 		BBA315692C3583C3008F07F5 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB0B91772C35363500F50A08 /* Roboto-Black.ttf */; };
 		BBA3156A2C3583C6008F07F5 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB0B917E2C35363500F50A08 /* Roboto-BlackItalic.ttf */; };
 		BBA3156B2C3583C9008F07F5 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB0B91782C35363500F50A08 /* Roboto-Bold.ttf */; };
@@ -34,6 +37,12 @@
 		BBA315722C3583E8008F07F5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB0B917F2C35363500F50A08 /* Roboto-Regular.ttf */; };
 		BBA315732C3583EB008F07F5 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB0B917C2C35363500F50A08 /* Roboto-Thin.ttf */; };
 		BBA315742C3583ED008F07F5 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB0B91792C35363500F50A08 /* Roboto-ThinItalic.ttf */; };
+		BBCDBD912C365F00009C69BB /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDBD8F2C365F00009C69BB /* OTPViewController.swift */; };
+		BBCDBD922C365F00009C69BB /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBCDBD902C365F00009C69BB /* OTPViewController.xib */; };
+		BBCDBD942C365F0C009C69BB /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDBD932C365F0C009C69BB /* OTPViewModel.swift */; };
+		BBF09E242C36BFF600E4BC9B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF09E232C36BFF600E4BC9B /* Enums.swift */; };
+		BBF09E292C36CF1D00E4BC9B /* ChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF09E282C36CF1D00E4BC9B /* ChatsTableViewCell.xib */; };
+		BBF09E2A2C36CF1D00E4BC9B /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF09E272C36CF1D00E4BC9B /* ChatsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +75,16 @@
 		BB0B919A2C35680400F50A08 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BB0B919C2C356B9C00F50A08 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BB0B919E2C356FF300F50A08 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		BB2650FF2C36AED3007A4F25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BB2651002C36AED3007A4F25 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BB2651032C36AEDE007A4F25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB77A53B2C3584B200A42E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCDBD8F2C365F00009C69BB /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		BBCDBD902C365F00009C69BB /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		BBCDBD932C365F0C009C69BB /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		BBF09E232C36BFF600E4BC9B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		BBF09E272C36CF1D00E4BC9B /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
+		BBF09E282C36CF1D00E4BC9B /* ChatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsTableViewCell.xib; sourceTree = "<group>"; };
 		E1DA4CE993A449509C80FA74 /* Pods-Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat App.release.xcconfig"; path = "Target Support Files/Pods-Chat App/Pods-Chat App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +149,8 @@
 			children = (
 				BB0B91702C35325900F50A08 /* Welcome */,
 				BB0B91672C35262400F50A08 /* Login */,
+				BBCDBD8E2C365EE0009C69BB /* OTP */,
+				BB2650FE2C36AEBE007A4F25 /* Home */,
 			);
 			path = "Controllers & Models";
 			sourceTree = "<group>";
@@ -173,6 +193,8 @@
 		BB0B916C2C3526C400F50A08 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				BBF09E272C36CF1D00E4BC9B /* ChatsTableViewCell.swift */,
+				BBF09E282C36CF1D00E4BC9B /* ChatsTableViewCell.xib */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -227,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				BB0B91932C354E9A00F50A08 /* Structs */,
+				BBF09E232C36BFF600E4BC9B /* Enums.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -237,6 +260,26 @@
 				BB0B91942C354EA500F50A08 /* Structs.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		BB2650FE2C36AEBE007A4F25 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BB2650FF2C36AED3007A4F25 /* HomeViewController.swift */,
+				BB2651002C36AED3007A4F25 /* HomeViewController.xib */,
+				BB2651032C36AEDE007A4F25 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BBCDBD8E2C365EE0009C69BB /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				BBCDBD8F2C365F00009C69BB /* OTPViewController.swift */,
+				BBCDBD902C365F00009C69BB /* OTPViewController.xib */,
+				BBCDBD932C365F0C009C69BB /* OTPViewModel.swift */,
+			);
+			path = OTP;
 			sourceTree = "<group>";
 		};
 		F12CEB449584A42268B28586 /* Frameworks */ = {
@@ -311,11 +354,13 @@
 				BB0B916B2C35264000F50A08 /* LoginVC.xib in Resources */,
 				BBA315732C3583EB008F07F5 /* Roboto-Thin.ttf in Resources */,
 				BBA315702C3583DA008F07F5 /* Roboto-Medium.ttf in Resources */,
+				BBCDBD922C365F00009C69BB /* OTPViewController.xib in Resources */,
 				BBA3156A2C3583C6008F07F5 /* Roboto-BlackItalic.ttf in Resources */,
 				BB0B91572C3524C500F50A08 /* Assets.xcassets in Resources */,
 				BBA3156D2C3583CF008F07F5 /* Roboto-Italic.ttf in Resources */,
 				BBA315692C3583C3008F07F5 /* Roboto-Black.ttf in Resources */,
 				BBA3156B2C3583C9008F07F5 /* Roboto-Bold.ttf in Resources */,
+				BBF09E292C36CF1D00E4BC9B /* ChatsTableViewCell.xib in Resources */,
 				BBA315742C3583ED008F07F5 /* Roboto-ThinItalic.ttf in Resources */,
 				BB0B915A2C3524C500F50A08 /* Base in Resources */,
 				BBA3156F2C3583D5008F07F5 /* Roboto-LightItalic.ttf in Resources */,
@@ -323,6 +368,7 @@
 				BBA3156E2C3583D2008F07F5 /* Roboto-Light.ttf in Resources */,
 				BBA315722C3583E8008F07F5 /* Roboto-Regular.ttf in Resources */,
 				BB0B91742C3533C800F50A08 /* WelcomeVC.xib in Resources */,
+				BB2651022C36AED3007A4F25 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +427,15 @@
 				BB0B914E2C3524C300F50A08 /* AppDelegate.swift in Sources */,
 				BB0B91732C3533C800F50A08 /* WelcomeVC.swift in Sources */,
 				BB0B919B2C35680400F50A08 /* Router.swift in Sources */,
+				BBCDBD912C365F00009C69BB /* OTPViewController.swift in Sources */,
+				BBF09E242C36BFF600E4BC9B /* Enums.swift in Sources */,
 				BB0B91502C3524C300F50A08 /* SceneDelegate.swift in Sources */,
+				BBF09E2A2C36CF1D00E4BC9B /* ChatsTableViewCell.swift in Sources */,
+				BBCDBD942C365F0C009C69BB /* OTPViewModel.swift in Sources */,
+				BB2651042C36AEDE007A4F25 /* HomeViewModel.swift in Sources */,
 				BB0B916A2C35264000F50A08 /* LoginVC.swift in Sources */,
 				BB0B916F2C35291600F50A08 /* Extensions.swift in Sources */,
+				BB2651012C36AED3007A4F25 /* HomeViewController.swift in Sources */,
 				BB0B919D2C356B9C00F50A08 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,9 +597,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,9 +629,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,20 +1,24 @@
 PODS:
   - CountryPickerView (3.3.0)
+  - DPOTPView (1.5.12)
   - IQKeyboardManagerSwift (7.0.3)
 
 DEPENDENCIES:
   - CountryPickerView
+  - DPOTPView
   - IQKeyboardManagerSwift
 
 SPEC REPOS:
   trunk:
     - CountryPickerView
+    - DPOTPView
     - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
   CountryPickerView: 6322ada32a80b0cd721b0267282a5c24f406f263
+  DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
   IQKeyboardManagerSwift: f9c5dc36cba16ddd2e51fa7d51c34a2e083029b5
 
-PODFILE CHECKSUM: 26fbc856e72c875944f2f0ef82e54f8fa7fe45ba
+PODFILE CHECKSUM: 0bf0294b04d8e30afab8e947e37a70ee270dd9c1
 
 COCOAPODS: 1.15.2

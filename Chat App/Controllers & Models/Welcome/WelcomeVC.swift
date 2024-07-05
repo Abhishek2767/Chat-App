@@ -11,7 +11,7 @@ class WelcomeVC: UIViewController, UITextViewDelegate {
     
     
     //MARK: - Variables
-    var welcomeViewModel: WelcomeViewModel
+    private let welcomeViewModel: WelcomeViewModel
     
     //MARK: - Outlets
     @IBOutlet weak var btnAgree: UIButton!

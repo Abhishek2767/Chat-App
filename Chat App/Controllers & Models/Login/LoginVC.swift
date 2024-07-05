@@ -11,7 +11,7 @@ import CountryPickerView
 class LoginVC: UIViewController {
     
     //MARK: - Variables
-    var loginViewModel: LoginProtocol
+    private let viewModel: LoginProtocol
     
     
     //MARK: - Outlets
@@ -25,7 +25,7 @@ class LoginVC: UIViewController {
     
     //MARK: - init
     init(loginViewModel: LoginProtocol) {
-        self.loginViewModel = loginViewModel
+        self.viewModel = loginViewModel
         super.init(nibName: LoginVC.className, bundle: nil)
     }
     
@@ -43,6 +43,13 @@ class LoginVC: UIViewController {
     override func viewDidLayoutSubviews() {
         btnNext.layer.cornerRadius = 3
     }
+    
+    
+    //MARK: - Button Actions
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        viewModel.router.redirectToOTP()
+    }
+    
     
     
     //MARK: - Functions

@@ -11,6 +11,8 @@ import UIKit
 protocol RouterProtocol {
     func goBack()
     func redirectToLogin()
+    func redirectToOTP()
+    func redirectToHome()
 }
 
 
@@ -21,6 +23,16 @@ class Router: RouterProtocol {
     
     func redirectToLogin() {
         let vc = LoginVC(loginViewModel: LoginViewModel(router: Router()))
+        SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
+    }
+    
+    func redirectToOTP() {
+        let vc = OTPViewController(viewModel: OTPViewModel(router: Router()))
+        SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
+    }
+    
+    func redirectToHome() {
+        let vc = HomeViewController(viewModel: HomeViewModel(router: Router()))
         SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
     }
 }
