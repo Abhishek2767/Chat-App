@@ -9,11 +9,11 @@ import UIKit
 
 class TextChatTableViewCell: UITableViewCell {
     
-    var chatData: Chats? {
-        didSet {
-            setData()
-        }
-    }
+//    var chatData: Chats? {
+//        didSet {
+//            setData()
+//        }
+//    }
 
     @IBOutlet weak var chatBackgroundView: UIView!
     @IBOutlet weak var lblMessage: UILabel!
@@ -36,18 +36,18 @@ class TextChatTableViewCell: UITableViewCell {
     }
     
     func setData() {
-        guard let data = chatData else {
-            return
-        }
-        
-        if data.type == "sent" {
-            stackView.addArrangedSubview(emptyView)
-            stackView.addArrangedSubview(chatBackgroundView)
-        } else {
-            stackView.addArrangedSubview(chatBackgroundView)
-            stackView.addArrangedSubview(emptyView)
-        }
-        lblMessage.text = data.message
-        lblTime.text = data.time
+//        guard let data = chatData else {
+//            return
+//        }
+//        
+//        if data.type == "sent" {
+//            stackView.addArrangedSubview(emptyView)
+//            stackView.addArrangedSubview(chatBackgroundView)
+//        } else {
+//            stackView.addArrangedSubview(chatBackgroundView)
+//            stackView.addArrangedSubview(emptyView)
+//        }
+//        lblMessage.text = data.message
+//        lblTime.text = data.time
     }
 }

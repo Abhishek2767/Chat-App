@@ -110,6 +110,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="lastMessageStackView" destination="sbZ-o8-Ban" id="jtp-8n-a7K"/>
                 <outlet property="lblDate" destination="yIW-CL-A1o" id="DzM-JZ-osg"/>
                 <outlet property="lblMessage" destination="weH-H5-gvu" id="cjh-mr-Lwr"/>
                 <outlet property="lblName" destination="Fch-73-eND" id="FTn-kT-shI"/>

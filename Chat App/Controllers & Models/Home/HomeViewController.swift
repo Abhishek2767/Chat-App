@@ -20,7 +20,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btnStartChatting: UIButton!
     @IBOutlet weak var noChatView: UIView!
     @IBOutlet weak var contactsTableView: UITableView!
-    
+    @IBOutlet weak var btnAddNewFriend: UIButton!
+
     
     @IBOutlet weak var lblNotHaveChat: UILabel!
     
@@ -45,6 +46,8 @@ class HomeViewController: UIViewController {
         lblNotHaveChat.font = Fonts.robotoMedium.font(size: 32)
         btnStartChatting.titleLabel?.font = Fonts.robotoMedium.font(size: 20)
         btnStartChatting.layer.cornerRadius = btnStartChatting.frame.height / 2
+        btnAddNewFriend.layer.cornerRadius = btnAddNewFriend.frame.height / 2
+
     }
     
     
@@ -71,6 +74,10 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func addNewFriendButtonAction(_ sender: UIButton) {
+        viewModel.router.redirectToContact()
+    }
+
     
     //MARK: - Functions
     
@@ -101,6 +108,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.router.redirectToChat()
+//        viewModel.router.redirectToChat()
     }
 }

@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Chat_App" customModuleProvider="target">
             <connections>
+                <outlet property="btnAddNewFriend" destination="LPD-nJ-Tcm" id="3H4-Ym-aw6"/>
                 <outlet property="btnStartChatting" destination="4Mo-Ph-ZjQ" id="dKT-GB-Mrw"/>
                 <outlet property="callsUnderLineView" destination="ebd-I5-ZNH" id="QLL-hR-nHz"/>
                 <outlet property="chatUnderLineView" destination="YO5-5z-1cW" id="Lee-NE-Mo0"/>
@@ -232,6 +233,19 @@
                             <rect key="frame" x="0.0" y="148" width="393" height="670"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPD-nJ-Tcm">
+                            <rect key="frame" x="318" y="743" width="55" height="55"/>
+                            <color key="backgroundColor" name="primaryButton"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="6yP-AC-GuM"/>
+                                <constraint firstAttribute="height" constant="55" id="Q9L-n2-S3d"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="iconChat"/>
+                            <connections>
+                                <action selector="addNewFriendButtonAction:" destination="-1" eventType="touchUpInside" id="7Ad-d6-Pdq"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -248,7 +262,9 @@
                         <constraint firstAttribute="trailing" secondItem="jrX-bN-CZ3" secondAttribute="trailing" id="eT0-3p-WpG"/>
                         <constraint firstItem="jrX-bN-CZ3" firstAttribute="top" secondItem="uiq-vZ-ctY" secondAttribute="bottom" id="enl-Xh-1KU"/>
                         <constraint firstItem="uiq-vZ-ctY" firstAttribute="top" secondItem="9y6-XA-hIi" secondAttribute="top" id="hKk-pD-Msx"/>
+                        <constraint firstAttribute="trailing" secondItem="LPD-nJ-Tcm" secondAttribute="trailing" constant="20" id="l6T-5j-9eS"/>
                         <constraint firstItem="jrX-bN-CZ3" firstAttribute="leading" secondItem="9y6-XA-hIi" secondAttribute="leading" id="wde-CZ-5jF"/>
+                        <constraint firstAttribute="bottom" secondItem="LPD-nJ-Tcm" secondAttribute="bottom" constant="20" id="zYH-sr-cAu"/>
                     </constraints>
                 </view>
             </subviews>
@@ -270,11 +286,15 @@
     </objects>
     <resources>
         <image name="homeTopView" width="414" height="148"/>
+        <image name="iconChat" width="26" height="21"/>
         <image name="iconCheckBig" width="100" height="100"/>
         <image name="iconSearch" width="20" height="20"/>
         <image name="iconThreeDotWhite" width="5" height="18"/>
         <namedColor name="#0CCC83">
             <color red="0.046999998390674591" green="0.80000001192092896" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryButton">
+            <color red="0.0" green="0.6589999794960022" blue="0.51800000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryText">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

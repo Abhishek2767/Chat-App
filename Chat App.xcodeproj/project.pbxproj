@@ -52,6 +52,12 @@
 		BBF09E242C36BFF600E4BC9B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF09E232C36BFF600E4BC9B /* Enums.swift */; };
 		BBF09E292C36CF1D00E4BC9B /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF09E282C36CF1D00E4BC9B /* ContactTableViewCell.xib */; };
 		BBF09E2A2C36CF1D00E4BC9B /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF09E272C36CF1D00E4BC9B /* ContactTableViewCell.swift */; };
+		BBF439682C3BA92C007D7D76 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF439672C3BA92C007D7D76 /* Toast.swift */; };
+		BBF4396E2C3BC55C007D7D76 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF439692C3BC55C007D7D76 /* ContactModel.swift */; };
+		BBF4396F2C3BC55C007D7D76 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4396A2C3BC55C007D7D76 /* ContactsViewController.swift */; };
+		BBF439702C3BC55C007D7D76 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF4396B2C3BC55C007D7D76 /* ContactsViewController.xib */; };
+		BBF439712C3BC55C007D7D76 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4396C2C3BC55C007D7D76 /* ContactsViewModel.swift */; };
+		BBF439732C3BD3D5007D7D76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF439722C3BD3D5007D7D76 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +109,12 @@
 		BBF09E232C36BFF600E4BC9B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		BBF09E272C36CF1D00E4BC9B /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		BBF09E282C36CF1D00E4BC9B /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		BBF439672C3BA92C007D7D76 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		BBF439692C3BC55C007D7D76 /* ContactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		BBF4396A2C3BC55C007D7D76 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		BBF4396B2C3BC55C007D7D76 /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		BBF4396C2C3BC55C007D7D76 /* ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		BBF439722C3BD3D5007D7D76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E1DA4CE993A449509C80FA74 /* Pods-Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat App.release.xcconfig"; path = "Target Support Files/Pods-Chat App/Pods-Chat App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +193,7 @@
 				BBCDBD8E2C365EE0009C69BB /* OTP */,
 				BB2650FE2C36AEBE007A4F25 /* Home */,
 				BB078D5E2C37B218008EDE76 /* Chat */,
+				BBF4396D2C3BC55C007D7D76 /* Contacts */,
 			);
 			path = "Controllers & Models";
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				BB0B919A2C35680400F50A08 /* Router.swift */,
+				BBF439672C3BA92C007D7D76 /* Toast.swift */,
 				BBBCA0D52C380107004568A1 /* Utility.swift */,
 			);
 			path = Helpers;
@@ -280,18 +294,11 @@
 		BB0B91922C354E9100F50A08 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				BB0B91932C354E9A00F50A08 /* Structs */,
 				BBF09E232C36BFF600E4BC9B /* Enums.swift */,
+				BB0B91942C354EA500F50A08 /* Structs.swift */,
+				BBF439722C3BD3D5007D7D76 /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		BB0B91932C354E9A00F50A08 /* Structs */ = {
-			isa = PBXGroup;
-			children = (
-				BB0B91942C354EA500F50A08 /* Structs.swift */,
-			);
-			path = Structs;
 			sourceTree = "<group>";
 		};
 		BB1C0F4F2C37C0D7005FB5F8 /* Chat Screen */ = {
@@ -323,6 +330,17 @@
 				BBCDBD932C365F0C009C69BB /* OTPViewModel.swift */,
 			);
 			path = OTP;
+			sourceTree = "<group>";
+		};
+		BBF4396D2C3BC55C007D7D76 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				BBF439692C3BC55C007D7D76 /* ContactModel.swift */,
+				BBF4396A2C3BC55C007D7D76 /* ContactsViewController.swift */,
+				BBF4396B2C3BC55C007D7D76 /* ContactsViewController.xib */,
+				BBF4396C2C3BC55C007D7D76 /* ContactsViewModel.swift */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		F12CEB449584A42268B28586 /* Frameworks */ = {
@@ -394,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBA3156C2C3583CC008F07F5 /* Roboto-BoldItalic.ttf in Resources */,
+				BBF439702C3BC55C007D7D76 /* ContactsViewController.xib in Resources */,
 				BB1C0F522C37C144005FB5F8 /* TextChatTableViewCell.xib in Resources */,
 				BBBCA0D12C37DA76004568A1 /* ChatTableHeaderView.xib in Resources */,
 				BB0B916B2C35264000F50A08 /* LoginVC.xib in Resources */,
@@ -472,7 +491,10 @@
 				BB0B919F2C356FF300F50A08 /* WelcomeViewModel.swift in Sources */,
 				BB0B91952C354EA500F50A08 /* Structs.swift in Sources */,
 				BB0B914E2C3524C300F50A08 /* AppDelegate.swift in Sources */,
+				BBF4396E2C3BC55C007D7D76 /* ContactModel.swift in Sources */,
+				BBF4396F2C3BC55C007D7D76 /* ContactsViewController.swift in Sources */,
 				BB0B91732C3533C800F50A08 /* WelcomeVC.swift in Sources */,
+				BBF439732C3BD3D5007D7D76 /* Constants.swift in Sources */,
 				BB0B919B2C35680400F50A08 /* Router.swift in Sources */,
 				BBCDBD912C365F00009C69BB /* OTPViewController.swift in Sources */,
 				BBF09E242C36BFF600E4BC9B /* Enums.swift in Sources */,
@@ -482,11 +504,13 @@
 				BBF09E2A2C36CF1D00E4BC9B /* ContactTableViewCell.swift in Sources */,
 				BBCDBD942C365F0C009C69BB /* OTPViewModel.swift in Sources */,
 				BB2651042C36AEDE007A4F25 /* HomeViewModel.swift in Sources */,
+				BBF439712C3BC55C007D7D76 /* ContactsViewModel.swift in Sources */,
 				BBBCA0D62C380107004568A1 /* Utility.swift in Sources */,
 				BB0B916A2C35264000F50A08 /* LoginVC.swift in Sources */,
 				BB0B916F2C35291600F50A08 /* Extensions.swift in Sources */,
 				BBBCA0D32C37DC24004568A1 /* ChatTableHeaderView.swift in Sources */,
 				BB2651012C36AED3007A4F25 /* HomeViewController.swift in Sources */,
+				BBF439682C3BA92C007D7D76 /* Toast.swift in Sources */,
 				BB078D642C37B31F008EDE76 /* ChatViewModel.swift in Sources */,
 				BB0B919D2C356B9C00F50A08 /* LoginViewModel.swift in Sources */,
 			);

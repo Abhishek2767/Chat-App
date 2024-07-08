@@ -49,4 +49,18 @@ class Utility: NSObject {
         defaults.removeObject(forKey: key)
         defaults.synchronize()
     }
+    
+    
+    class func getPrivateChannelId(otherUserId : String,loginUserId : String) -> String {
+        var idArray : [String] = []
+        idArray = [otherUserId,loginUserId]
+        idArray.sort(){$0 < $1}
+        return "\(idArray.first!)_\(idArray.last!)"
+    }
+
+    class func getCurrentTime() -> Int64 {
+        let date = Date().timeIntervalSince1970 * 1000
+        return Int64(date)
+    }
+
 }

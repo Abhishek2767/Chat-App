@@ -48,18 +48,19 @@ class LoginVC: UIViewController {
     
     //MARK: - Button Actions
     @IBAction func nextButtonAction(_ sender: UIButton) {
-        if let number = numberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), number != "" {
+        if isValidUserInput() {
+            let number  = numberTextField.text!
             
             Utility.showLoadingView()
-            viewModel.verifyNumber(phoneNumber: number) { result in
+            viewModel.verifyNumber(phoneNumber: "\(countryPickerView.selectedCountry.phoneCode) \(number)") { result in
                 Utility.hideLoadingView()
                 
                 switch result {
                 case .success(_):
-                    self.viewModel.router.redirectToOTP()
+                    self.viewModel.router.redirectToOTP(phoneNumber: number, coutryPhoneCode: self.countryPickerView.selectedCountry.phoneCode)
                     
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    self.showToast(message: error.localizedDescription)
                 }
             }
         }
@@ -83,6 +84,21 @@ class LoginVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    
+    private func isValidUserInput() -> Bool {
+        if numberTextField.text == "" {
+            showToast(message: ToastMessages.enterNumber)
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    private func showToast(message: String) {
+        self.view.makeToast(message, position: .top)
+    }
+
     
     @objc func keyboardWillShow(_ notification: Notification) {
         let userInfo = notification.userInfo

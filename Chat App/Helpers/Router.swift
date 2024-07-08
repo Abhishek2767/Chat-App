@@ -11,9 +11,10 @@ import UIKit
 protocol RouterProtocol {
     func goBack()
     func redirectToLogin()
-    func redirectToOTP()
+    func redirectToOTP(phoneNumber: String, coutryPhoneCode: String)
     func redirectToHome()
-    func redirectToChat()
+    func redirectToChat(receiverData: ContactModel)
+    func redirectToContact()
 }
 
 
@@ -27,8 +28,8 @@ class Router: RouterProtocol {
         SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
     }
     
-    func redirectToOTP() {
-        let vc = OTPViewController(viewModel: OTPViewModel(router: Router()))
+    func redirectToOTP(phoneNumber: String, coutryPhoneCode: String) {
+        let vc = OTPViewController(viewModel: OTPViewModel(router: Router(), phoneNumber: phoneNumber, coutryPhoneCode: coutryPhoneCode))
         SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
     }
     
@@ -37,8 +38,14 @@ class Router: RouterProtocol {
         SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
     }
     
-    func redirectToChat() {
-        let vc = ChatViewController(viewModel: ChatViewModel(router: Router()))
+    func redirectToContact() {
+        let vc = ContactsViewController(viewModel: ContactsViewModel(router: Router()))
+        SceneDelegate().sceneDelegate?.mainNav?.present(vc, animated: true)
+    }
+
+    
+    func redirectToChat(receiverData: ContactModel) {
+        let vc = ChatViewController(viewModel: ChatViewModel(router: Router(), receiverData: receiverData))
         SceneDelegate().sceneDelegate?.mainNav?.pushViewController(vc, animated: true)
     }
 }

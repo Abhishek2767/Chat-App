@@ -13,4 +13,6 @@ enum HomeSection {
 
 enum PreferenceKeys: String {
     case verificationID
+    case isLogin
 }
+
