@@ -88,7 +88,7 @@ class OTPViewModel: OTPProtocol {
         
         let userData: [String: Any] = [
             "user_id": authID,
-            "name": "Aarya",
+//            "name": "Aarya",
             "country_code": coutryPhoneCode,
             "phone_number": phoneNumber,
             "profile_photo_url": "https://firebasestorage.googleapis.com/v0/b/whatsapp-chat-d83e5.appspot.com/o/ProfileImages%2FDefaultProfile.png?alt=media&token=3375f757-318e-4384-9bd0-66f7fd790172",

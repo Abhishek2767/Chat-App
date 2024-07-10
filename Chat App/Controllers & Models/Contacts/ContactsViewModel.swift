@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 protocol ContactsProtocol {
     var router: RouterProtocol { get }
-    var contacts: [ContactModel] { get }
+    var contacts: [UserModel] { get }
     
     
     func fetchAllUsers(completion: @escaping (String?) -> Void)
@@ -19,7 +19,7 @@ protocol ContactsProtocol {
 class ContactsViewModel: ContactsProtocol {
     
     var router: RouterProtocol
-    var contacts: [ContactModel] = []
+    var contacts: [UserModel] = []
     
     let db = Firestore.firestore()
     
@@ -30,7 +30,6 @@ class ContactsViewModel: ContactsProtocol {
     
     
     func fetchAllUsers(completion: @escaping (String?) -> Void) {
-
         let usersCollection = db.collection("users")
         
         usersCollection.getDocuments { (querySnapshot, error) in
@@ -44,22 +43,22 @@ class ContactsViewModel: ContactsProtocol {
                 return
             }
             
-            // Map documents to ContactModel objects
-            var fetchedContacts: [ContactModel] = []
+            // Map documents to UserModel objects
+            var fetchedContacts: [UserModel] = []
             
-            for document in documents {
+            documents.forEach { document in
                 do {
-                    // Attempt to decode document into ContactModel
-                    let contact = try document.data(as: ContactModel.self)
+                    // Attempt to decode document into UserModel
+                    let contact = try document.data(as: UserModel.self)
                     fetchedContacts.append(contact)
-                    
                 } catch {
-                    completion("Error decoding user data for document \(document.documentID): \(error.localizedDescription)")
+                    print("Error decoding user data for document \(document.documentID): \(error.localizedDescription)")
                 }
             }
+            
+            // Update contacts and call completion handler
             self.contacts = fetchedContacts
             completion(nil)
         }
     }
-    
 }

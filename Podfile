@@ -12,6 +12,7 @@ target 'Chat App' do
   pod 'DPOTPView'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
-  pod 'KRProgressHUD'
-  
+  pod 'SVProgressHUD'
+  pod 'SDWebImage'
+
 end

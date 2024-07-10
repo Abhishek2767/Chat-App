@@ -40,6 +40,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        
+        viewModel.fetchFriendListener {
+            self.contactsTableView.reloadData()
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -47,9 +51,7 @@ class HomeViewController: UIViewController {
         btnStartChatting.titleLabel?.font = Fonts.robotoMedium.font(size: 20)
         btnStartChatting.layer.cornerRadius = btnStartChatting.frame.height / 2
         btnAddNewFriend.layer.cornerRadius = btnAddNewFriend.frame.height / 2
-
     }
-    
     
     
     //MARK: - Button Actions
@@ -78,7 +80,10 @@ class HomeViewController: UIViewController {
         viewModel.router.redirectToContact()
     }
 
-    
+    @IBAction func signOutButtonActions(_ sender: UIButton) {
+        showLogoutAlert()
+    }
+
     //MARK: - Functions
     
     private func configure() {
@@ -87,15 +92,48 @@ class HomeViewController: UIViewController {
         contactsTableView.showsHorizontalScrollIndicator = false
         contactsTableView.showsVerticalScrollIndicator = false
         contactsTableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-
+        
         contactsTableView.register(UINib(nibName: ContactTableViewCell.className, bundle: nil), forCellReuseIdentifier: ContactTableViewCell.className)
+    }
+    
+    private func showLogoutAlert() {
+        let alertController = UIAlertController(
+            title: Constants.logoutStr,
+            message: Constants.sureToLogoutStr,
+            preferredStyle: .alert
+        )
+
+        let cancelAction = UIAlertAction(title: Constants.cancelStr, style: .cancel, handler: nil)
+
+        let logoutAction = UIAlertAction(title: Constants.logoutStr, style: .destructive) { _ in
+            // Perform logout action here, such as signing out the user
+            Utility.showLoadingView()
+            self.viewModel.signOut { result in
+                Utility.hideLoadingView()
+                
+                switch result {
+                case .success(_):
+                    self.viewModel.router.redirectoWelcome()
+                    
+                case .failure(let error):
+                    self.view.makeToast(error.localizedDescription, position: .top)
+                }
+            }
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(logoutAction)
+
+        // Present the alert controller
+        present(alertController, animated: true, completion: nil)
+
     }
 }
 
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        viewModel.friendsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,6 +142,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.selectionStyle = .none
         
+        let data = viewModel.friendsList[indexPath.row]
+        
+        cell.data = data
         return cell
     }
     

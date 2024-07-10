@@ -22,14 +22,14 @@ protocol ChatProtocol {
 class ChatViewModel: ChatProtocol {
     
     var router: RouterProtocol
-    var receiverData: ContactModel
+    var receiverData: UserModel
     
     var channelId : String!
     var curentUserID : String!
     
     
 
-    init(router: RouterProtocol, receiverData: ContactModel) {
+    init(router: RouterProtocol, receiverData: UserModel) {
         self.router = router
         self.receiverData = receiverData
     }

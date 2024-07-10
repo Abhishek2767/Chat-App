@@ -53,43 +53,31 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendButtonAction(_ sender: UIButton) {
-//        if sender.tag == 0 {
-//                
-//        } else {
-//            guard let text = messageTextField.text, !text.isEmpty else { return }
-////            viewModel.chatData[2].data.append(Chats(message: text, time: Utility.currentDate("hh:mm a"), type: "sent"))
-//            chatTableView.reloadData()
-//            scrollToBottom()
-//            
-//            messageTextField.text?.removeAll()
-//
-//        }
-        
-        
         viewModel.sendMessage(message: messageTextField.text ?? "")
     }
     
     
     //MARK: - Functions
     func configure() {
-//        chatTableView.delegate = self
-//        chatTableView.dataSource = self
+        //        chatTableView.delegate = self
+        //        chatTableView.dataSource = self
         chatTableView.showsHorizontalScrollIndicator = false
         chatTableView.showsVerticalScrollIndicator = false
         chatTableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 25, right: 0)
         chatTableView.register(UINib(nibName: TextChatTableViewCell.className, bundle: nil), forCellReuseIdentifier: TextChatTableViewCell.className)
         scrollToBottom()
-
+        
         messageTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        lblName.text = viewModel.receiverData.name
         
         if let userID = Auth.auth().currentUser?.uid {
             viewModel.curentUserID = userID
         }
         viewModel.channelId = Utility.getPrivateChannelId(otherUserId: viewModel.receiverData.userID, loginUserId: viewModel.curentUserID)
-
-        
         
     }
+
     
     func scrollToBottom() {
         let lastSection = chatTableView.numberOfSections - 1

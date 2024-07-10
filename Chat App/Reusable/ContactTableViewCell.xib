@@ -116,7 +116,7 @@
                 <outlet property="lblName" destination="Fch-73-eND" id="FTn-kT-shI"/>
                 <outlet property="messageStatusImageView" destination="YUF-WW-CvL" id="x7V-K2-wjn"/>
                 <outlet property="messageTypeImageView" destination="1rY-XE-LpY" id="k6i-qt-KvC"/>
-                <outlet property="profileImageView" destination="cKN-hK-0L4" id="AaG-Ao-nUx"/>
+                <outlet property="profileImageView" destination="cKN-hK-0L4" id="mbQ-ja-rsl"/>
             </connections>
             <point key="canvasLocation" x="22.137404580152669" y="19.014084507042256"/>
         </tableViewCell>

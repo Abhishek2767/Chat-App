@@ -27,6 +27,7 @@
 		BB0B919F2C356FF300F50A08 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B919E2C356FF300F50A08 /* WelcomeViewModel.swift */; };
 		BB1C0F522C37C144005FB5F8 /* TextChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1C0F512C37C144005FB5F8 /* TextChatTableViewCell.xib */; };
 		BB1C0F532C37C144005FB5F8 /* TextChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C0F502C37C144005FB5F8 /* TextChatTableViewCell.swift */; };
+		BB247E962C3E509400E66618 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB247E952C3E509400E66618 /* HomeDataModel.swift */; };
 		BB2651012C36AED3007A4F25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2650FF2C36AED3007A4F25 /* HomeViewController.swift */; };
 		BB2651022C36AED3007A4F25 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2651002C36AED3007A4F25 /* HomeViewController.xib */; };
 		BB2651042C36AEDE007A4F25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2651032C36AEDE007A4F25 /* HomeViewModel.swift */; };
@@ -95,6 +96,7 @@
 		BB0B919E2C356FF300F50A08 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		BB1C0F502C37C144005FB5F8 /* TextChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChatTableViewCell.swift; sourceTree = "<group>"; };
 		BB1C0F512C37C144005FB5F8 /* TextChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextChatTableViewCell.xib; sourceTree = "<group>"; };
+		BB247E952C3E509400E66618 /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 		BB2650FF2C36AED3007A4F25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB2651002C36AED3007A4F25 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		BB2651032C36AEDE007A4F25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				BB2650FF2C36AED3007A4F25 /* HomeViewController.swift */,
 				BB2651002C36AED3007A4F25 /* HomeViewController.xib */,
 				BB2651032C36AEDE007A4F25 /* HomeViewModel.swift */,
+				BB247E952C3E509400E66618 /* HomeDataModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				BB0B919B2C35680400F50A08 /* Router.swift in Sources */,
 				BBCDBD912C365F00009C69BB /* OTPViewController.swift in Sources */,
 				BBF09E242C36BFF600E4BC9B /* Enums.swift in Sources */,
+				BB247E962C3E509400E66618 /* HomeDataModel.swift in Sources */,
 				BB0B91502C3524C300F50A08 /* SceneDelegate.swift in Sources */,
 				BB078D612C37B313008EDE76 /* ChatViewController.swift in Sources */,
 				BB1C0F532C37C144005FB5F8 /* TextChatTableViewCell.swift in Sources */,

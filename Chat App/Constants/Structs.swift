@@ -11,10 +11,12 @@ struct Constants {
     static let termsAndPrivacyStr = "Read our Privacy Policy. Tap “Agree and continue” to accept the Teams of Service."
     static let privacyPolicyStr = "Privacy Policy."
     static let termsOfServiceStr = "Teams of Service."
-    static let users = "users"
-    static let channels = "channels"
     static let subNodeChatMemberData = "ChatMemberData"
     static let subNodeGroupMessage = "GroupMessages"
+    static let cancelStr = "Cancel"
+    static let logoutStr = "Logout"
+    static let sureToLogoutStr = "Are you sure you want to logout?"
+
     
 }
 

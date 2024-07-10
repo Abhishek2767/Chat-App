@@ -72,6 +72,7 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.lblDate.isHidden = true
         cell.lastMessageStackView.isHidden = true
         cell.lblName.text = viewModel.contacts[indexPath.row].name
+        cell.profileImageView.sd_setImage(with: URL(string: viewModel.contacts[indexPath.row].profilePhotoUrl))
         return cell
     }
     
